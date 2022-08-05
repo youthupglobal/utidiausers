@@ -7,13 +7,13 @@ import Request from "../../Dashboard_Pages/Request/Request"
 import Logo from "../../assets/SideNav/utidia_logo1_adobe_express (1).svg"
 import User from "../../assets/SideNav/icons8-customer (1).svg"
 import message from "../../assets/SideNav/message.svg"
-import pie_chart from "../../assets/SideNav/pie-chart.svg"
+import payment from "../../assets/SideNav/payment.svg"
 import logout from "../../assets/SideNav/logout.svg"
 
 const Dashboard = () => {
 	const [Expanded, setExpandedState] = useState(false);
 
-	let userDetails = JSON.parse( sessionStorage.getItem("userLoginDetails"))
+	let userDetails = JSON.parse(sessionStorage.getItem("userLoginDetails"))
 
 	const redirect = () =>{
 		window.location = "/"
@@ -48,7 +48,6 @@ const Dashboard = () => {
 				<div className="nav-menu">
 					
 					<Link to="/profile"
-						onClick={() => setExpandedState(!Expanded)}
 						className={Expanded ? "menu-item" : "menu-item menu-item-NX"}
 						
 					>
@@ -57,7 +56,6 @@ const Dashboard = () => {
 					</Link>
 
 					<Link to="/request"
-						onClick={() => setExpandedState(!Expanded)}
 						className={Expanded ? "menu-item" : "menu-item menu-item-NX"}
 						
 					>
@@ -66,11 +64,10 @@ const Dashboard = () => {
 					</Link>
 
 					<Link to="/payment"
-						onClick={() => setExpandedState(!Expanded)}
 						className={Expanded ? "menu-item" : "menu-item menu-item-NX"}
 						
 					>
-						<img className="menu-item-icon" src={pie_chart}  alt="message-icon" />
+						<img className="menu-item-icon" src={payment}  alt="payment-icon" />
 						{Expanded && <p>{"Payment"}</p>}
 					</Link>
 					
