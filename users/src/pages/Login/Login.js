@@ -24,7 +24,7 @@ const Login = () => {
       toast.success(`"Welcome" ${form.email}`)
 
       setTimeout(() => {
-        window.location="/profile"
+        window.location="dashboard/profile"
       }, 3000);
  
   }
@@ -35,7 +35,7 @@ const Login = () => {
       <div className='form-div'>
 
         <form onSubmit={handleSubmit}>
-          <h4>User Sign In</h4>
+          <h4>Talent Sign In</h4>
 
           <input type="email" 
             className='input' 

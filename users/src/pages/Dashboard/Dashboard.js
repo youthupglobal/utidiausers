@@ -45,9 +45,12 @@ const Dashboard = () => {
 						<span></span>
 					</button>
 				</div>
-				<div className="nav-menu">
+				<div className="nav-menu" 
+
+					onClick={() => setExpandedState(false)}
+				>
 					
-					<Link to="/profile"
+					<Link to="/dashboard/profile"
 						className={Expanded ? "menu-item" : "menu-item menu-item-NX"}
 						
 					>
@@ -55,7 +58,7 @@ const Dashboard = () => {
 						{Expanded && <p>{"Profile"}</p>}
 					</Link>
 
-					<Link to="/request"
+					<Link to="dashboard/request"
 						className={Expanded ? "menu-item" : "menu-item menu-item-NX"}
 						
 					>
@@ -63,7 +66,7 @@ const Dashboard = () => {
 						{Expanded && <p>{"Request"}</p>}
 					</Link>
 
-					<Link to="/payment"
+					<Link to="dashboard/payment"
 						className={Expanded ? "menu-item" : "menu-item menu-item-NX"}
 						
 					>
@@ -94,9 +97,9 @@ const Dashboard = () => {
 			{/* PAGE ROUTING */}
 			<div>
 				<Routes>
-					<Route path="profile/*" element={<Profile />} />
-					<Route path="payment/*" element={<Payment />} />
-					<Route path="request/*" element={<Request />} />
+					<Route path="/dashboard/profile/*" element={<Profile />} />
+					<Route path="/dashboard/payment/*" element={<Payment />} />
+					<Route path="/dashboard/request/*" element={<Request />} />
 				</Routes>
 			</div>
 		</div>

@@ -33,15 +33,21 @@ form input{
 }
 
 form button{
+    max-width: 300px;
     width: 250px;
     padding: 15px;
     border-radius: 15px;
     margin: auto;
+    margin-bottom: 20px;
     cursor: pointer;
-    background-color: var(--light-blue);
-    color: var(--light);
+    background-color: #98D458;
+    border-color: #98D458;
+    color: var(--dark);
     font-size: larger;
+    display: flex; 
+    justify-content: center;
 }
+
 
 
 /* MEDIA QUERY */
