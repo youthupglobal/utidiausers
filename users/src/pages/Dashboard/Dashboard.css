@@ -123,14 +123,37 @@
 	font-size: 15px;
 	font-weight: 900;
 	color: var(--dark);
+	margin-left: 20px;
 }
 .logout-icon {
 	width: 30px;
 	margin: auto;
 	border-radius: 90px;
-	padding: 20px;
+	padding: 5px;
 	margin-left: 5px;
 }
 .logout-icon:hover {
 	background-color: var(--light-blue);
+}
+
+ 
+@media screen and (max-width: 540px){
+	
+	.side-nav-container{
+		transition: 0.4s;
+	}
+	.side-nav-container-NX{
+		width: 50px;
+	} 
+	
+	.hamburger{
+		margin-left: 0;
+	}
+	.hamburger span {
+		width: 25px;
+	}
+	.menu-item img {
+		width: 30px;
+		padding: 0 5px;
+	}
 }

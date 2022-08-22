@@ -2,6 +2,8 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 import Login from "./pages/Login/Login";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
+
 
 function App() {
 	return (
@@ -9,7 +11,9 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Login />} />
-					<Route path="/*" element={<Dashboard />} />
+					<Route element={<ProtectedRoute />} >
+						<Route path="/*" element={<Dashboard />} />
+					</Route>				
 				</Routes>
 			</BrowserRouter>
 		</div>

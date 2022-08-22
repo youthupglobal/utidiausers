@@ -8,16 +8,18 @@ import Logo from "../../assets/SideNav/utidia_logo1_adobe_express (1).svg"
 import User from "../../assets/SideNav/icons8-customer (1).svg"
 import message from "../../assets/SideNav/message.svg"
 import payment from "../../assets/SideNav/payment.svg"
-import logout from "../../assets/SideNav/logout.svg"
+import logout_icon from "../../assets/SideNav/logout.svg"
 
 const Dashboard = () => {
 	const [Expanded, setExpandedState] = useState(false);
 
-	let userDetails = JSON.parse(sessionStorage.getItem("userLoginDetails"))
 
-	const redirect = () =>{
+	const logout = () =>{
+
+		localStorage.removeItem("talent")
 		window.location = "/"
 	}
+
 	return (
 		<div>
 			<div
@@ -80,14 +82,14 @@ const Dashboard = () => {
 				{Expanded && (
 					<div className="nav-details">
 						<div className="nav-footer-info">
-							<p className="nav-footer-user-name">{userDetails.email}</p>
+							<p className="nav-footer-user-name">Logout</p>
 						</div>
 					</div>
 				)}
 				<img className="logout-icon" 
-					src={logout} 
-					alt="" srcset="" 
-					onClick={redirect}
+					src={logout_icon} 
+					alt="logout icon" 
+					onClick={logout}
 				 />
 			</div>
 
