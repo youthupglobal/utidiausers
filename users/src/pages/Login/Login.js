@@ -22,7 +22,8 @@ const Login = () => {
     )
     .then((res) => {
       if (res.data.token) {
-        localStorage.setItem("talent", JSON.stringify(res.data));
+        localStorage.setItem("talent", JSON.stringify(res.data.token));
+        localStorage.setItem("talentID", JSON.stringify(res.data.user_id));
        
         toast.success(`Welcome ${email}`)
 

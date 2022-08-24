@@ -17,7 +17,10 @@ const Dashboard = () => {
 	const logout = () =>{
 
 		localStorage.removeItem("talent")
-		window.location = "/"
+
+		setTimeout(() => {
+			window.location = "/"
+		}, 2000)
 	}
 
 	return (
@@ -75,25 +78,26 @@ const Dashboard = () => {
 						<img className="menu-item-icon" src={payment}  alt="payment-icon" />
 						{Expanded && <p>{"Payment"}</p>}
 					</Link>
+
+					<Link to="/"
+						onClick={logout}
+						className={Expanded ? "menu-item" : "menu-item menu-item-NX"}
+						
+					>
+						<img 
+							className="menu-item-icon" 
+							src={logout_icon} 
+							alt="logout-icon" 
+						/>
+						{Expanded && <p>{"Logout"}</p>}
+					</Link>
 					
 				</div>
+				<footer>
+					<p>email</p>
+				</footer>
 			</div>
-			<div className="nav-footer">
-				{Expanded && (
-					<div className="nav-details">
-						<div className="nav-footer-info">
-							<p className="nav-footer-user-name">Logout</p>
-						</div>
-					</div>
-				)}
-				<img className="logout-icon" 
-					src={logout_icon} 
-					alt="logout icon" 
-					onClick={logout}
-				 />
-			</div>
-
-
+			
 		</div>
 
 			{/* PAGE ROUTING */}
