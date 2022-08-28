@@ -4,7 +4,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import Profile from "../../Dashboard_Pages/Profile/Profile"
 import Payment from "../../Dashboard_Pages/Payment/Payment"
 import Request from "../../Dashboard_Pages/Request/Request"
-import Logo from "../../assets/SideNav/utidia_logo1_adobe_express (1).svg"
+import Logo from "../../assets/SideNav/utidia_logo.svg"
 import User from "../../assets/SideNav/icons8-customer (1).svg"
 import message from "../../assets/SideNav/message.svg"
 import payment from "../../assets/SideNav/payment.svg"
@@ -93,9 +93,6 @@ const Dashboard = () => {
 					</Link>
 					
 				</div>
-				<footer>
-					<p>email</p>
-				</footer>
 			</div>
 			
 		</div>
