@@ -25,7 +25,6 @@ const Profile = () => {
         }
       })
       .then(res => {
-        console.log(res.data)
         setUserData(res.data)
       })
     }
